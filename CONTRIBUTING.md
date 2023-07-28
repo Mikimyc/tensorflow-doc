@@ -10,7 +10,11 @@ for guidance. For questions, the
 [docs@tensorflow.org](https://groups.google.com/a/tensorflow.org/forum/#!forum/docs)
 mailing list is available.
 
-Questions about TensorFlow usage are better addressed on
+Feedback on coding contributions can take up to several weeks due to limited resources. 
+With the unbalanced number of contributors and availability of code reviewers, 
+the reviewing process can take quite some time, so please be patient with us. 
+
+More questions about TensorFlow usage are better addressed on
 [Stack Overflow](https://stackoverflow.com/questions/tagged/tensorflow) or the
 [discuss@tensorflow.org](https://groups.google.com/a/tensorflow.org/forum/#!forum/discuss)
 mailing list.

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run this from your github clone.
+# Run this from your GitHub clone.
 # It assumes you have tensorflow_docs as the "upstream" remote.
 
 OLD_BRANCH=$1
@@ -32,11 +32,11 @@ git checkout  --track upstream/"$NEW_BRANCH" || (git checkout -b "$NEW_BRANCH")
 # Merge the previous version. If that gives a merge-conflict, auto-resolve and commit.
 git merge upstream/$OLD_BRANCH --message "merge $OLD_BRANCH" ||  (grep -l "<<<<<<<" -r | xargs git checkout --ours && git commit -am "merge $OLD_BRANCH")
 
-# Overwrite the ditectory with the contents from tensorflow/en/versions
+# Overwrite the directory with the contents from tensorflow/en/versions
 rm -rf site/en/api_docs/python
 python ../tensorflow/tensorflow/tools/docs/generate2.py --output_dir=site/en/api_docs/python --code_url_prefix="https://github.com/tensorflow/tensorflow/blob/${NEW_BRANCH}/tensorflow"
 
-# Commit and push to your github.
+# Commit and push to your GitHub.
 git add site/en/api_docs/
 git commit -am "Update docs to $NEW_BRANCH"
 git push -f origin $NEW_BRANCH
